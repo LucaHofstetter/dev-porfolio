@@ -38,10 +38,10 @@ for (let i=0; i<4; i++) {
   scene.add(sphereMeshes[i]); // Add sphere to canvas
 }
 
-// const newSphere = new THREE.SphereGeometry(10, 32, 32);
-// const sphereMaterial1 = new THREE.MeshLambertMaterial({color: 0xC56CEF});
-// const sphereMesh1 = new THREE.Mesh(newSphere, sphereMaterial1);
-// scene.add(newSphere)
+const newSphere = new THREE.SphereGeometry(10, 32, 32);
+const sphereMaterial1 = new THREE.MeshLambertMaterial({color: 0xC56CEF});
+const sphereMesh1 = new THREE.Mesh(newSphere, sphereMaterial1);
+scene.add(newSphere);
 
 // Lights
 const lights = []; // Storage for lights
@@ -86,8 +86,8 @@ controls.rotateSpeed = 4;
 controls.dynamicDampingFactor = 0.15;
 
 // Axes Helper
-// const axesHelper = new THREE.AxesHelper(5);
-// scene.add( axesHelper ); // X axis = red, Y axis = green, Z axis = blue
+const axesHelper = new THREE.AxesHelper(5);
+scene.add( axesHelper ); // X axis = red, Y axis = green, Z axis = blue
 
 // Trigonometry Constants for Orbital Paths
 let theta = 0; // Current angle
