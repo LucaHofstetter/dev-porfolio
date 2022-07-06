@@ -62,7 +62,7 @@
 
     // Properties for each light
     const lightValues = [
-      {colour: 0x38E000, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+      {colour: 0x38E000, intensity: 10, dist: 12, x: 1, y: 0, z: 8},
       {colour: 0xC56CEF, intensity: 6, dist: 12, x: -2, y: 1, z: -10},
       {colour: 0x000078, intensity: 3, dist: 10, x: 0, y: 10, z: 1},
       {colour: 0x00ffdd, intensity: 6, dist: 12, x: 0, y: -10, z: -1},
@@ -115,8 +115,8 @@
       controls.update();
 
       // Constantly rotate box
-      scene.rotation.z -= 0.005;
-      scene.rotation.x -= 0.01;
+      scene.rotation.z -= 0.01;
+      scene.rotation.x -= 0.02;
 
       //Increment theta, and update sphere coords based off new value
       theta += dTheta;
@@ -125,8 +125,8 @@
       // MUST BE INSIDE RENDERING FUNCTION OR THETA VALUES ONLY GET SET ONCE
       const trigs = [
           {x: Math.cos(theta*1.05), y: Math.sin(theta*1.05), z: Math.cos(theta*1.05), r: 2},
-          {x: Math.cos(theta*0.8), y: Math.sin(theta*0.8), z: Math.sin(theta*0.8), r: 2.25},
-          {x: Math.cos(theta*1.25), y: Math.cos(theta*1.25), z: Math.sin(theta*1.25), r: 2.5},
+          {x: Math.cos(theta*1), y: Math.sin(theta*1), z: Math.sin(theta*1), r: 2.25},
+          {x: Math.cos(theta*1.6), y: Math.cos(theta*1.6), z: Math.sin(theta*1.6), r: 2.5},
           {x: Math.sin(theta*0.6), y: Math.cos(theta*0.6), z: Math.sin(theta*0), r: 2.75}
       ];
 
